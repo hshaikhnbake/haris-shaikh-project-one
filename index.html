@@ -5,78 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a5445796b5.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Montserrat:wght@400;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&family=Montserrat:ital,wght@0,400;0,600;1,700&display=swap"
         rel="stylesheet">
     <title>Thunder Force Stadium</title>
 </head>
 <body>
     <header>
-        <nav>
-            <ul id="navigation">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="wrapper">
+            <nav>
+                    <!--Mobile Nav-->
+                    <label for="toggle"><i class="fa fa-bars" aria-hidden="true"></i><span class="sr-only">Menu</span></label>
+                    <input type="checkbox" id="toggle" name="toggle" />
+                    <!--Nav-->
+                    <ul id="navigation">
+                        <li><a href="#home" title="Click here to visit the Homepage">Home</a></li>
+                        <li><a href="#about" title="Click here to visit the About Page">About</a></li>
+                        <li><a href="#blog" title="Click here to visit the Blog">Blog</a></li>
+                        <li><a href="#contact" title="Click here to visit the Contact Page">Contact</a></li>
+                    </ul>
+            </nav>
+            <!--Header and Header Container-->
+            <div class="header-container">
+                <div class="header">
+                    <h1>Thunder Force Stadium</h1>
+                    <h3>Presented By Hot Cops</h3>
+                </div>
+            </div>
 
-        <div class="social-icon-sidebar">
-            <a href="http://www.instagram.com"><i class="fab fa-instagram" aria-hidden="true"></i></a><span class="sr-only">Instagram</span>
-            <a href="http://www.facebook.com"><i class="fab fa-facebook-f" aria-hidden="true"></i></a><span class="sr-only">Facebook</span>
-            <a href="http://www.snapchat.com"><i class="fab fa-facebook-f aria-hidden="true"></i></a><span class="sr-only">Snapchat</span>
-            <a href="http://www.twitter.com"><i class="fab fa-twitter" aria-hidden="true"></i></a><span class="sr-only">Twitter</span>
+            <!--Social Icons-->
+            <aside class="social-icons">
+                <a href="http://www.instagram.com"><i class="fab fa-instagram" aria-hidden="true"></i></a><span
+                    class="sr-only">Instagram</span>
+                <a href="http://www.facebook.com"><i class="fab fa-facebook-f" aria-hidden="true"></i></a><span
+                    class="sr-only">Facebook</span>
+                <a href="http://www.snapchat.com"><i class="fab fa-snapchat-ghost" aria-hidden="true"></i></a><span
+                    class="sr-only">Snapchat</span>
+                <a href="http://www.twitter.com"><i class="fab fa-twitter" aria-hidden="true"></i></a><span
+                    class="sr-only">Twitter</span>
+            </aside>
         </div>
-
-        <h1>Thunder Force Stadium</h1>
-        <h3>Presented By Hot Cops</h3>
     </header>
 
     <main>
+        <!--Concert Detials-->
         <section class="concert-details">
-            <article class="line-up">
-
-                <div class="text-container">
-                    <h2></h2>
-                </div>
+            <!--Concert First Section-->
+            <article class="line-up clearfix">
                 <div class="image-container">
-                    <img src="" alt="">
+                    <img src="./assets/image-2_2@2x.png" alt="A musical artist singing into a microphone">
                 </div>
-
+                <div class="wrapper">
+                    <div class="text-container wrapper">
+                        <h2>Performing Line Up</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum aut, iusto explicabo fuga porro et accusamus omnis numquam voluptas reprehenderit suscipit nihil hic sed consectetur voluptatum corporis odio.</p>
+                        <div class="button-wrapper">
+                            <a class="button" href="#read-more" title="Click Here To Read More">Read More</a>
+                        </div>
+                    </div>
+                </div>
             </article>
-
-            <article class="experiences">
-                <div class="text-container">
-                    <h2></h2>
-                </div>
+            <!--Concert Second Section-->
+            <article class="experiences clearfix">
                 <div class="image-container">
-                    <img src="" alt="">
+                    <img src="./assets/image-2-copy@2x.png" alt="A zoomed-in picture of band member playing a saxophone">
                 </div>
-            
+                <div class="wrapper">
+                    <div class="text-container">
+                        <h2>New Experiences</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum aut, iusto explicabo fuga porro et accusamus omnis numquam voluptas reprehenderit suscipit nihil hic sed consectetur voluptatum corporis odio.</p>
+                        <div class="button-wrapper">
+                            <a class="button" href="#read-more" title="Click Here To Read More">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!--Concert Third Section-->
+            <article class="get-tickets clearfix">
+                <div class="wrapper">
+                    <div class="image-container">
+                        <img src="./assets/image-6@2x.png" alt="A crowd in a concert cheering">
+                    </div>
+
+                    <div class="text-container">
+                        <h2>Get Your Tickets</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum aut, iusto explicabo fuga porro et accusamus omnis numquam voluptas reprehenderit suscipit nihil hic sed consectetur voluptatum corporis odio. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum aut, iusto explicabo fuga porro et accusamus omnis
+                        numquam voluptas reprehenderit suscipit nihil hic sed consectetur voluptatum corporis odio.</p>
+                        <div class="button-wrapper">
+                            <a class="button" href="#read-more" title="Click Here To Read More">Read More</a>
+                        </div>
+                    </div>
+                </div>
             </article>
 
-            <article class="get-tickets">
-                <img src="" alt="">
-            
-            </article>
         </section>
 
-        <section class="quick-info">
+        <section class="quick-info clearfix">
+            <a href="#locations" class="icon-container" title="Click Here To Check Avaiable Locations">
+                <i class="fas fa-location-arrow" aria-hidden="true"></i><span
+                    class="sr-only">Location Pin</span>
+                <h3>Locations</h3>
+            </a>
+            <a href="#menu" class="icon-container" title="Click Here To Check Menu Options">
+                <i class="fas fa-ticket-alt" aria-hidden="true"></i><span
+                    class="sr-only">Menu Button</span>
+                <h3>Menu</h3>
+            </a>
+            <a href="#reach-out" class="icon-container" title="Click Here To Check Call Our Hotline">
+                <i class="fas fa-phone" aria-hidden="true"></i><span
+                    class="sr-only">Phone Number</span>
+                <h3>Reach Out</h3>
+            </a>
+
 
         </section>
 
-        <section class="instagram-feed">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+        <section class="instagram-gallery clearfix">
+            <div class="wrapper">
+            <h2>The Gram</h2>
+                <ul class="instagram-list">
+                    <li><img src="./assets/image-2@2x.png" alt="A Picture Of A Crowd In A Concert In The Nosebleeds Section"></li>
+                    <li><img class="zoom" src="./assets/gallery-image-2@2x.png" alt="A Picture Of The Band"></li>
+                    <li><img src="./assets/gallery-image-3@2x.png" alt="Food On A Plate"></li>
+                </ul>
+            </div>
+            
+            
+    
         </section>
     </main>
-    <footer>
-        <ul>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
+    <footer class="clearfix">
+        <div class="wrapper">
+            <!--Footer Nav-->
+            <nav>
+                <ul id="footer-navigation">
+                    <li><a href="#home" title="Click here to visit the Homepage">Home</a></li>
+                    <li><a href="#about" title="Click here to visit the About Page">About</a></li>
+                    <li><a href="#blog" title="Click here to visit the Blog">Blog</a></li>
+                    <li><a href="#contact" title="Click here to visit the Contact Page">Contact</a></li>
+                </ul>
+            </nav>
+            <!--Contact Us -->
+            <div class="contact-us">
+                <h2>Contact</h2>
+                <p>info@email.com | 416-967-1111<br>
+                123 Nightmare on Elm St, Toronto, ON<br>
+                A5A 5A5, Canada
+                </p>
+            </div>
+            <!--Subscribe Form-->
+            <div class="subscribe">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our news letter to stay updated</p>
+                <form action="#" method="POST" class="contact-form" name="contact-form">
+                    <label for="userEmail" class="sr-only">Provide your Email Address</label>
+                    <div class="subscribe-container clearfix">
+                        <input type="email" id="email" name="email" required placeholder="email address">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
     </footer>
 </body>
 </html>

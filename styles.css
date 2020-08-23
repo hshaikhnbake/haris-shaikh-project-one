@@ -1,0 +1,586 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration,input[type=search]::-webkit-search-results-button,input[type=search]::-webkit-search-results-decoration{-webkit-appearance:none;-moz-appearance:none}input[type=search]{-webkit-appearance:none;-moz-appearance:none;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}textarea{overflow:auto;vertical-align:top;resize:vertical}audio,canvas,video{display:inline-block;max-width:100%}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}a:focus{outline:thin dotted}a:active,a:hover{outline:0}img{border:0;-ms-interpolation-mode:bicubic}figure{margin:0}form{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}button,html,input,select,textarea{color:#222}::-moz-selection{background:#b3d4fc;text-shadow:none}::selection{background:#b3d4fc;text-shadow:none}img{vertical-align:middle}fieldset{border:0;margin:0;padding:0}textarea{resize:vertical}.chromeframe{margin:.2em 0;background:#ccc;color:#000;padding:.2em 0}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+
+
+/*global*/
+
+html {
+    color: #fff;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Montserrat;
+    font-size: 2rem;
+    line-height: 2.9rem;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+
+p {
+    font-weight: 700;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-family: Iceberg;
+}
+
+h1 {
+    font-size: 8rem;
+    line-height: 8rem;
+}
+
+h2 {
+    font-size: 5.2rem;
+    line-height: 5.2rem;
+}
+
+.button {
+    font-family: Iceberg;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 2.9rem;
+    background-color: #9200FF;
+    padding: 10px;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*header styles*/
+
+header {
+    background-image: url(./assets/image-1.png);
+    height: 90vh;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header h3 {
+    text-transform: lowercase;
+    font-size: 3.5rem;
+    background-color: #9200FF;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+
+.header-container {
+    height: 90%;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+.header-container .header {
+    max-width: 450px;
+}
+
+.header-container::before,
+.header-container .header {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-container::before {
+    content: '';
+    width: 0;
+    height: 90%;
+}
+
+/*Inspired By "CSS vertical alignment without flexbox" by Andras Sevcsik-Zajácz/
+
+/*source links: https://medium.com/@sevcsik/css-vertical-alignment-without-flexbox-a83eac44c574, http://jsfiddle.net/hx00epqu/18/ */
+
+/*converting SCSS to CSS: https://css-tricks.com/the-sass-ampersand/*/
+
+aside.social-icons {
+    position: absolute;
+    text-align: center;
+    right: 0;
+    top: 35vh;
+    margin-right: 30px;
+    font-size: 2rem;
+}
+
+aside.social-icons > a {
+    display: block;
+    padding: 5px;
+}
+
+/*nav styles*/
+
+nav {
+    text-align: center;
+    padding-top: 30px;
+}
+
+nav li {
+    margin: 20px 0;
+    display: inline-block;
+}
+
+nav li a {
+    padding: 20px;
+    font-size: 1.6rem;
+    transition: all ease-in-out 0.3s;
+}
+
+nav label,
+nav #toggle {
+    display: none;
+}
+
+nav a:hover,
+nav a:focus {
+    color: rgba(146, 0, 255, 0.75);
+}
+
+/*concert detials*/
+
+.text-container h2 {
+    padding-bottom: 20px;
+}
+.image-container,
+.text-container {
+    width: 50%
+}
+
+/*concert first section*/
+
+.line-up {
+    background-color: #0F0632;
+}
+
+.line-up .text-container {
+    padding: 100px 100px 100px 0;
+}
+
+.line-up .image-container {
+    float: right;
+}
+.line-up .text-container {
+    float: left;
+}
+
+/*concert second section*/
+.experiences {
+    background-color: #0F0632;;
+}
+
+.experiences .text-container {
+    padding: 100px 0px 100px 100px;
+}
+
+.experiences .image-container {
+    float: left
+}
+
+.experiences .text-container {
+    float: right;
+}
+
+/*concert third section*/
+
+.get-tickets {
+    padding: 80px 0;
+    background-color: #08080B;
+}
+
+.get-tickets .image-container {
+    float: left;
+    width: calc(25% - 25px);
+}
+
+.get-tickets .text-container {
+    float: right;
+    width:  calc(75% - 25px);
+    margin: auto 0;
+
+}
+
+/*quick-info-gallery*/
+.quick-info {
+    background-color: #3d0369;
+    text-align: center;
+    padding: 160px 0;
+}
+
+a.icon-container {
+    text-align: center;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 20px;
+    transition: all ease-in-out 0.3s;
+}
+
+.icon-container h3 {
+    font-size: 3rem;
+}
+
+.icon-container i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+a.icon-container:hover,
+a.icon-container:focus {
+    transform: scale(1.2)
+}
+
+/*Instagram Feed - The Gram*/
+
+.instagram-gallery {
+    padding: 60px 0;
+    background-color: #08080B;
+    text-align: center;
+}
+.instagram-gallery ul {
+    margin-top: 60px;
+}
+
+.instagram-gallery li {
+    float: left;
+    width: calc(33% - 10px);
+    padding: 0 10px;
+}
+
+
+footer {
+    padding: 20px 0 60px;
+    background-color: #3d0369;
+}
+
+footer nav {
+    padding-bottom: 60px;
+}
+
+
+nav #footer-navigation a:hover,
+nav #footer-naviagation a:focus {
+    color: rgba(8, 8, 11, 0.8);
+}
+
+footer h2 {
+    font-size: 3.5rem;
+    
+}
+
+.contact-us p {
+    margin-top: 10px;
+}
+
+.contact-us {
+    float: left;
+    width: 50%;
+}
+
+.subscribe {
+    float: left;
+    width: 50%;
+}
+
+.subscribe p {
+    font-weight: 400;
+}
+
+/*subscribe form styles*/
+
+.subscribe-container {
+    width: 100%;
+    margin-top: 10px;
+}
+input {
+    width: 74%;
+    padding: 10px 0px 10px 20px;
+    margin: auto;
+    background-color: #f6f7f9;
+    border: none;
+    float: left;
+    height: 40px;
+}
+
+::placeholder {
+    color: #231F1F;
+}
+
+button {
+    width: 25%;
+    font-family: Iceberg;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #9200FF;
+    display: inline-block;
+    border: none;
+    height: 40px;
+}
+
+@media (max-width: 1170px) {
+    .image-container, .text-container {
+        width: 100%;
+    }
+
+    .line-up .text-container {
+        padding: 100px 0;
+    }
+
+    .experiences .text-container {
+        padding: 100px 0;
+    }
+
+    .get-tickets .image-container {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .get-tickets .text-container {
+        width: 100%;
+}
+
+@media (max-width: 940px) {
+
+    .contact-us {
+        text-align: center;
+        width: 100%;
+    }
+
+    .subscribe {
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 25px;
+        text-align: center;
+    }
+
+    button {
+        margin-top: 10px;
+        width: 100%;
+        padding: 15px 0 35px;
+        margin-bottom: 15px;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /*header*/
+    header {
+        height: 60vh;
+        }
+
+    header h1 {
+            font-size: 6.5rem;
+            line-height: 6.5rem;
+    }
+
+    header h5 {
+        font-size: 2.5rem;
+    }
+
+    aside.social-icons {
+        top: 20vh;
+    }
+
+    .header-container .header {
+        max-width: 431px;
+    }
+
+    .header-container {
+    height: 105%;
+    }
+
+    /*mobile nav*/
+
+    nav {
+        padding-top: 0px;
+    }
+    nav ul {
+    text-align: left;
+    }
+
+    nav li {
+    display: block;
+    }
+
+    ul#navigation {
+        display: block;
+		background-color: rgb(34, 34, 34, 0.90);
+		position: fixed;
+		z-index: 5;
+		width: 100%;
+		right: 0;
+		height: 100%;
+		right: -100%;
+        transition: all .5s ease-in; 
+    }
+
+    ul#navigation a {
+        width: 100%;
+        display: inline-block;
+        padding: 20px;
+    }
+
+    #toggle:checked + ul#navigation {
+        right: 0
+    }
+
+    #toggle {
+        display: none;
+    }
+
+    label[for="toggle"] {
+        position: absolute;
+        display: block;
+        font-size: 2rem;
+        padding: 20px;
+        color: #fff;
+        height: auto;
+        right: 0;
+        z-index: 10;
+    }
+
+    /*button*/
+
+    .button-wrapper {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    /*concert details*/
+        .line-up .text-container {
+        padding: 60px 0 20px 0;
+    }
+
+    .experiences .text-container {
+        padding: 60px 0 20px 0;
+    }
+
+    .get-tickets .image-container {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .get-tickets {
+    padding: 40px 0 20px 0;
+    }
+
+    /*quick info gallery*/
+    a.icon-container {
+        text-align: center;
+        display: block;
+        margin: 20px 0;
+        padding: 20px;
+    }
+
+    .quick-info {
+        background-color: #3d0369;
+        text-align: center;
+        padding: 60px 0;
+    }
+
+        /*instagram-gallery*/
+
+    .instagram-gallery li {
+        width: 50%;
+        padding: 5px;
+        overflow: hidden;
+
+    }
+
+    .instagram-list img.zoom {
+        object-fit: cover;
+        width: 120%;
+
+    }
+    .instagram-list li:last-child {
+        display: none;
+    }
+
+
+    nav ul#footer-navigation {
+    text-align: center;
+    }
+
+    nav ul#footer-navigation li {
+    display: inline-block;
+    }
+
+    .contact-us p {
+    margin-top: 0px;
+    }
+
+}
+
+@media (max-width: 574px) {
+    .header-container .header {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /*header*/
+    header {
+    height: 50vh;
+    }
+
+    header h1 {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    header h3 {
+    font-size: 2rem;
+    padding: 10px;
+    }  
+
+    .header-container .header {
+    max-width: 270px;
+    }
+
+    .header-container {
+    height: 130%;
+    }
+
+    aside {
+    display: none;
+    }
+}
+
+#footer-navigation a {
+    padding: 10px;
+}
+
+@media (max-width: 320px) {
+}}
