@@ -576,11 +576,14 @@ button {
     aside {
     display: none;
     }
-}
 
-#footer-navigation a {
+    #footer-navigation a {
     padding: 10px;
 }
+
+}
+
+
 
 @media (max-width: 320px) {
 }}
